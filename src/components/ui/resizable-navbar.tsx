@@ -82,7 +82,7 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
         boxShadow: visible
           ? "0 0 0 1px rgba(100, 150, 255, 0.1), 0 10px 30px -10px rgba(0,0,0,0.1)" // Blue tinted shadow
           : "none",
-        width: visible ? "45%" : "100%", // Wider for minimalist breathing room
+        width: visible ? "60%" : "120%", // Wider for minimalist breathing room
         y: visible ? 20 : 0,
       }}
       transition={{

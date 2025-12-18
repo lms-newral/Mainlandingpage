@@ -6,9 +6,11 @@ import FullNavbar from "../ui/navbar";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { NoiseBackground } from "../ui/noise-background";
+import { FlipWords } from "../ui/flip-words";
 
 export default function HeroSectionOne() {
     const [isImageLoaded, setIsImageLoaded] = useState(false);
+    const words = ["build", "scale", "launch", "manage"];
 
     // Your specific Brand Colors
     const brandGradient = "linear-gradient(to right, rgb(255, 100, 150), rgb(100, 150, 255), rgb(255, 200, 100))";
@@ -41,7 +43,7 @@ export default function HeroSectionOne() {
                     {/* 2. Main Heading */}
                     <div className="space-y-6">
                         <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-[1.1] text-neutral-900 dark:text-white">
-                           Everything you need to build and scale your <br />
+                            Everything you need to  <br /> <FlipWords words={words} />your <span></span>   
                             <motion.span
                                 style={{
                                     backgroundImage: brandGradient,
@@ -52,12 +54,12 @@ export default function HeroSectionOne() {
                                 animate={{ backgroundPosition: ["0% center", "100% center", "0% center"] }}
                                 transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
                             >
-                                Edtech
+                                             Edtech
                             </motion.span>
                         </h1>
 
                         <p className="text-lg md:text-xl text-neutral-500 dark:text-neutral-400 max-w-2xl mx-auto leading-relaxed">
-                           A fully managed, white-label Learning Management System with custom domains, branding, and no watermarks—built for modern ed-tech businesses.
+                            A fully managed, white-label Learning Management System with custom domains, branding, and no watermarks—built for modern ed-tech businesses.
                         </p>
                     </div>
 
@@ -76,7 +78,7 @@ export default function HeroSectionOne() {
                             </button>
                         </NoiseBackground>
 
-                       
+
                     </div>
                 </motion.div>
 
@@ -92,7 +94,7 @@ export default function HeroSectionOne() {
 
                     <div className="relative rounded-2xl border border-black/10 dark:border-white/10 bg-white/50 dark:bg-neutral-900/50 p-2 backdrop-blur-sm shadow-2xl">
                         <div className="overflow-hidden rounded-xl border border-black/5 dark:border-white/5 bg-neutral-100 dark:bg-neutral-800">
-                          
+
                             <img
                                 src="https://res.cloudinary.com/dyktjldc4/image/upload/v1765972188/Dashboard_oaiabu.jpg"
                                 alt="LMS Dashboard Preview"

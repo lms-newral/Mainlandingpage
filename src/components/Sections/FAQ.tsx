@@ -18,7 +18,7 @@ export default function FAQSection() {
                         <h2 className="text-6xl font-bold leading-tight">
                             Questions
                             <br />
-                            And Answers
+                            & Answers
                         </h2>
                     </div>
 
