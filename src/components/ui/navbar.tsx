@@ -28,7 +28,7 @@ export default function FullNavbar() {
       <NavBody className="max-w-6xl">
         {/* Logo Section */}
         <a href="#" className="flex items-center gap-2 group">
-         
+
           <span className="text-xl font-bold font-sans tracking-tighter text-black dark:text-white">Synapses</span>
         </a>
 
@@ -53,7 +53,7 @@ export default function FullNavbar() {
       <MobileNav>
         <MobileNavHeader>
           <div className="flex items-center gap-2">
-           <span className="text-xl font-bold font-sans tracking-tighter text-black dark:text-white">Synapses</span>
+            <span className="text-xl font-bold font-sans tracking-tighter text-black dark:text-white">Synapses</span>
           </div>
           <div className="flex items-center gap-4">
             <ThemeToggle />

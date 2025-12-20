@@ -48,7 +48,7 @@ export default function HowItWorksSection() {
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="flex items-center gap-2 px-4 py-1 rounded-full bg-neutral-100 dark:bg-neutral-800 border border-black/5 dark:border-white/10 text-neutral-600 dark:text-neutral-400 text-xs font-semibold uppercase tracking-widest mb-6"
+                        className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 text-xs font-semibold mb-6"
                     >
                         <Settings className="w-3 h-3" />
                         <span>Getting Started</span>

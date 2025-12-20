@@ -7,6 +7,7 @@ import Reviews from "@/components/Sections/review";
 import { Spotlight } from "@/components/ui/spotlight"; // Aceternity UI
 import { BackgroundBeams } from "@/components/ui/background-beams"; // Aceternity UI
 import FullNavbar from "@/components/ui/navbar";
+import TeamSection from "@/components/Sections/teamsection";
 
 export default function Home() {
   return (
@@ -50,7 +51,9 @@ export default function Home() {
         <section id="how-it-works" className="scroll-mt-20">
           <HowItWorksSection />
         </section>
-
+ <section id="TeamSection" className="scroll-mt-20">
+<TeamSection/>
+ </section>
         <section id="reviews" className="scroll-mt-20">
           <Reviews />
         </section>
