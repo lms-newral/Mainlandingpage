@@ -30,7 +30,7 @@ const teamMembers = [
         accent: "#FFC864", // Gold
     },
     {
-        name: "Ram Bhadwaj",
+        name: "Ram Bhardwajj",
         role: "Founding Engineer",
         image: "https://res.cloudinary.com/dhvkjanwa/image/upload/v1766233164/profile-pic_1_q4e0zp.png",
         x: "https://x.com",
