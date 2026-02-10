@@ -67,7 +67,7 @@ export default function HeroSectionOne() {
                                 </motion.span>
                             </h1>
                             <p className="text-lg w-2xl text-start md:text-xl text-neutral-500 dark:text-neutral-400  leading-relaxed">
-                                A fully managed, white-label Learning Management System with custom domains, branding, and AI automation—built for modern synapses.
+                                A fully managed, white-label Learning Management System with custom domains, branding, and AI automation—built for modern synappses.
                             </p>
                         </div>
                           {/* 2. Main Heading */}
@@ -92,7 +92,7 @@ export default function HeroSectionOne() {
                             </h1>
 
                             <p className="text-lg text-center md:text-xl text-neutral-500 dark:text-neutral-400 max-w-xl leading-relaxed">
-                                A fully managed, white-label Learning Management System with custom domains, branding, and AI automation—built for modern synapses.
+                                A fully managed, white-label Learning Management System with custom domains, branding, and AI automation—built for modern synappses.
                             </p>
                         </div>
 
@@ -145,7 +145,7 @@ export default function HeroSectionOne() {
                                     </h1>
 
                                     <p className="text-base leading-relaxed text-neutral-500 dark:text-neutral-400">
-                                        Let's discuss how Synapses can white-label your knowledge and scale your ed-tech business globally.
+                                        Let's discuss how synappses can white-label your knowledge and scale your ed-tech business globally.
                                     </p>
 
                                     <NoiseBackground
@@ -164,7 +164,7 @@ export default function HeroSectionOne() {
                                     <p className="text-xs font-bold uppercase tracking-widest text-neutral-400">Direct Email</p>
                                     <div className="flex items-center gap-2 text-lg font-bold tracking-tight text-neutral-900 dark:text-white group cursor-pointer">
                                         <Mail className="w-4 h-4 text-[#FF6496] group-hover:rotate-12 transition-transform" />
-                                        <span>hello@synapses.com</span>
+                                        <span>hello@synappses.in</span>
                                     </div>
                                 </div>
                             </div>
@@ -189,7 +189,7 @@ export default function HeroSectionOne() {
                                 <div className="overflow-hidden rounded-2xl border border-black/5 dark:border-white/5 bg-neutral-100 dark:bg-neutral-800">
                                     <img
                                         src="https://res.cloudinary.com/dyktjldc4/image/upload/v1765972188/Dashboard_oaiabu.jpg"
-                                        alt="Synapses Dashboard Preview"
+                                        alt="synappses Dashboard Preview"
                                         className={cn(
                                             "w-full h-auto transition-all duration-700 hover:scale-[1.02]",
                                              "opacity-100" 
