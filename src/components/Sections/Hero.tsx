@@ -19,7 +19,7 @@ export default function HeroSectionOne() {
 
     return (
         <div className="relative w-full h-386 overflow-x-clip ">
-            <div className="pointer-events-none absolute inset-0 -z-10 w-full h-344 bg-[url('/hero-grid.png')] bg-cover bg-top bg-no-repeat" />
+            <div className="pointer-events-none absolute inset-0 -z-10 w-full h-344 bg-[url('/hero-grid.svg')] bg-cover bg-top bg-no-repeat" />
          
             <main className="relative mx-auto w-full max-w-6xl px-4 sm:px-6 pt-32 md:pt-42 md:pb-36 ">
                 <div className="flex flex-col items-center text-center">
