@@ -42,7 +42,7 @@ export default function HeroSectionOne() {
                         initial={{ opacity: 0, y: 16 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.7, delay: 0.05 }}
-                        className="mt-8 max-w-3xl text-balance text-sm font-medium leading-[1.05] tracking-tight text-[#111827] sm:text-5xl md:text-6xl lg:text-7xl"
+                        className="mt-8 max-w-3xl text-balance text-sm font-semibold leading-[1.05] tracking-tight text-[#111827] sm:text-5xl md:text-6xl lg:text-6xl"
                     >
                         Everything you need to{" "}
                         <FlipWords words={words} className="px-0 text-[#1F6BFF]" />
@@ -54,7 +54,7 @@ export default function HeroSectionOne() {
                         initial={{ opacity: 0, y: 12 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.1 }}
-                        className="mt-5 max-w-2xl font-medium leading-relaxed text-[#6B7280] sm:text-lg"
+                        className="mt-5 max-w-159 font-medium leading-relaxed text-[#6B7280] sm:text-xl"
                     >
                         A fully managed, white-label Learning Management System with custom domains,
                         branding, and AI automation—built for modern Edtech's.

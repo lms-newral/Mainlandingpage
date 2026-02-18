@@ -38,12 +38,12 @@ export default function FeaturesSection() {
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <div className="mb-20 text-center max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-[#F7FAFE] border border-blue-200 text-lg font-light mb-4">
-            <Image src="/sparkle.svg" alt="Message" width={25} height={25} />
-            <span className="font-extralight text-md">Core Platform Capabilities</span>
+          <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-[#F7FAFE] border border-blue-200 text-lg font-light mb-4">
+            <Image src="/sparkle.svg" alt="Message" width={20} height={20} />
+            <span className="font-light text-sm">Core Platform Capabilities</span>
           </div>
 
-          <h2 className="text-3xl md:text-5xl font-h tracking-tight text-neutral-900 dark:text-white mb-6 text-center">
+          <h2 className="text-3xl md:text-5xl font-semibold leading-tight tracking-tight text-neutral-900 dark:text-white mb-6 text-center">
             A learning platform built <br className="hidden md:block" />
             to look like your own product
           </h2>

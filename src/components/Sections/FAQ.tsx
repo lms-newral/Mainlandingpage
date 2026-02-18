@@ -15,18 +15,18 @@ export default function FAQSection() {
                         <Image src="/message_svg.svg" alt="Message" width={25} height={25} />
                         <span className="font-light text-md">Doubts?</span>
                     </div>
-                    <h2 className="text-5xl font-medium leading-tight">All Your Questions, Answered.</h2>
-                    <p className="text-xl text-gray-500 max-w-2xl">Don't take our word for it. Here is what the community has to say about our platform.</p>
+                    <h2 className="text-5xl font-semibold leading-tight tracking-tight mb-4">All your Questions, Answered.</h2>
+                    <p className="text-xl text-gray-500 max-w-xl">Don't take our word for it. Here is what the community has to say about our platform.</p>
                 </div>
-                <div className="grid md:grid-cols-2 gap-30 max-w-6xl mx-auto items-start">
+                <div className="grid md:grid-cols-2 gap-30 max-w-7xl mx-auto items-start">
                     <div
-                        className="w-full rounded-[32px] p-4 md:p-12 shadow-[0_30px_60px_rgba(15,23,42,0.08)]"
+                        className="w-full rounded-[32px] p-4 md:p-12"
                         style={{
                             background:
                                 "radial-gradient(120% 120% at 100% 0%, rgba(207,228,255,0.75) 0%, rgba(255,255,255,0) 55%), radial-gradient(120% 120% at 0% 100%, rgba(214,234,255,0.8) 0%, rgba(255,255,255,0) 55%), #F7FAFF",
                         }}
                     >
-                        <div className="flex flex-col items-start gap-4">
+                        <div className="flex flex-col max-w-109.25 items-start gap-4">
                             <h3 className="text-2xl md:text-2xl font-medium text-neutral-900 leading-tight">
                                 FAQs can only do so much.
                                 <br />
