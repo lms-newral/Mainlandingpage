@@ -119,7 +119,7 @@ export default function Reviews() {
               <span>Wall of Love</span>
             </div>
             
-            <h2 className="text-5xl md:text-5xl font-medium tracking-tight text-gray-900 mb-6">
+            <h2 className="text-5xl md:text-5xl font-semibold tracking-tightAll Your Q text-gray-900 mb-6">
               See what all the talk is about
             </h2>
             

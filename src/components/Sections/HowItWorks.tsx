@@ -84,7 +84,7 @@ export default function HowItWorksSection() {
                     <span className="font-light text-md">Getting Started</span>
                     </div>
                     
-                    <h2 className="text-4xl md:text-5xl font-medium leading-tight text-center mb-6">
+                    <h2 className="text-4xl md:text-5xl font-semibold leading-tight tracking-tight ext-center mb-6">
                         From demo to launch <br/>
                         in a few simple steps
                     </h2>
