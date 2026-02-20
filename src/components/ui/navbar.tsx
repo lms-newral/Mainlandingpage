@@ -42,13 +42,15 @@ export default function FullNavbar() {
 
         {/* Desktop Action */}
         <div className="hidden md:flex items-center gap-3">
-          <button 
-            onClick={() => window.open(demoUrl, "_blank", "noopener,noreferrer")} 
+          <a
+            href={demoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="group flex h-10 items-center justify-center rounded-full bg-[#1F6BFF] px-5 text-[14px] font-bold text-white transition-all hover:bg-[#1855cc] active:scale-95"
           >
             Request Demo
             <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </button>
+          </a>
         </div>
       </NavBody>
 
@@ -81,7 +83,7 @@ export default function FullNavbar() {
               </a>
             ))}
             
-            <div className="w-full h-[1px] bg-gray-100" />
+            <div className="w-full h-px bg-gray-100" />
             
             <div className="flex flex-col w-full gap-4">
               <button 
@@ -91,12 +93,15 @@ export default function FullNavbar() {
                 Login
               </button>
               
-              <button 
-                onClick={() => window.open(demoUrl, "_blank", "noopener,noreferrer")}
-                className="w-full py-4 rounded-full bg-[#1F6BFF] text-white text-[16px] font-bold shadow-lg shadow-blue-200 active:scale-95 transition-transform"
+              <a
+                href={demoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="w-full py-4 rounded-full bg-[#1F6BFF] text-white text-[16px] font-bold shadow-lg shadow-blue-200 active:scale-95 transition-transform text-center"
               >
                 Request Demo
-              </button>
+              </a>
             </div>
           </div>
         </MobileNavMenu>

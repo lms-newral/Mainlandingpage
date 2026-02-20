@@ -40,7 +40,9 @@ export default function FeaturesSection() {
         <div className="mb-20 text-center max-w-3xl mx-auto">
           <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-[#F7FAFE] border border-blue-200 text-lg font-light mb-4">
             <Image src="/sparkle.svg" alt="Message" width={20} height={20} />
-            <span className="font-light text-sm">Core Platform Capabilities</span>
+            <span className="font-light text-sm">
+              Core Platform Capabilities
+            </span>
           </div>
 
           <h2 className="text-3xl md:text-5xl font-semibold leading-tight tracking-tight text-neutral-900 dark:text-white mb-6 text-center">
@@ -67,50 +69,58 @@ export default function FeaturesSection() {
                 height={600}
               />
             </div>
-            <div className="mt-8 p-8">
-              <h3 className="text-2xl font-semibold text-neutral-900">AI-Assisted Insights</h3>
+            <div className="mt-8 p-6">
+              <h3 className="text-2xl font-semibold text-neutral-900">
+                AI-Assisted Insights
+              </h3>
               <p className="mt-2 text-md font-redular leading-relaxed text-neutral-700">
-                Understand how learners engage with your content. Track progress, completion,
-                drop-offs, and revenue with analytics designed for decision-makers.
+                AI-assisted LMS reduces teacher workload, flags risks, and
+                provides decision-ready analytics on progress, completion,
+                drop-offs, and revenue for leaders.
               </p>
             </div>
           </FeatureCard>
 
           {/* Test Scheduling */}
           {/* Test Scheduling */}
-          <FeatureCard className="md:col-span-4 bg-[#F6FAFF] after:bg-[radial-gradient(circle_at_85%_10%,rgba(206,228,255,0.9),transparent_60%),radial-gradient(circle_at_12%_88%,rgba(218,236,255,0.85),transparent_55%)] overflow-hidden">
+          <FeatureCard className="md:col-span-4 bg-[#F7FAFF] py-3 px-6 after:bg-[radial-gradient(circle_at_90%_0%,rgba(208,229,255,0.9),transparent_60%),radial-gradient(circle_at_15%_95%,rgba(220,238,255,0.85),transparent_55%)]">
             <div className="relative">
               {/* Replaced the complex div with the SVG asset */}
               <Image
-                src="/schedule.svg" 
+                src="/schedule.png"
                 alt="Test scheduling interface"
                 className="h-auto w-full"
                 width={400}
                 height={300}
               />
             </div>
-            
-            <div className="p-8">
+
+            <div className="">
               <h3 className="text-[22px] font-bold text-[#111827]">
                 Test Scheduling
               </h3>
-              <p className="mt-2 text-[15px] font-medium leading-relaxed text-[#4B5563]">
-                Group learners into cohorts with defined timelines, assignments, and milestones.
-                Ideal for bootcamps, live programs, and structured learning paths.
+              <p className="mt-2 text-md font-regular leading-relaxed text-[#4B5563]">
+                Test Scheduling organises learners into structured cohorts,
+                automates assignments, tests, and milestones, and keeps students
+                accountable and progressing on schedule.
               </p>
             </div>
           </FeatureCard>
 
           {/* Notifications */}
-          <FeatureCard className="md:col-span-4 bg-[#F7FAFF] p-6 after:bg-[radial-gradient(circle_at_90%_0%,rgba(208,229,255,0.9),transparent_60%),radial-gradient(circle_at_15%_95%,rgba(220,238,255,0.85),transparent_55%)]">
-            <div className="flex justify-center">
-              <span className="inline-flex items-center gap-2 rounded-full bg-[#1F6BFF] px-4 py-2 text-xs font-semibold text-white shadow-[0_10px_20px_rgba(31,107,255,0.25)]">
-                <Bell className="h-3.5 w-3.5" />
-                5 new notifications
-              </span>
+          <FeatureCard className="md:col-span-4 bg-[#F7FAFF] p-6 after:bg-[radial-gradient(circle_at_90%_0%,rgba(208,229,255,0.9),transparent_40%),radial-gradient(circle_at_15%_95%,rgba(220,238,255,0.85),transparent_55%)]">
+            <div className="relative">
+              {/* Replaced the complex div with the SVG asset */}
+              <Image
+                src="/notification_grid.png"
+                alt="Test scheduling interface"
+                className="h-auto w-full"
+                width={400}
+                height={300}
+              />
             </div>
             <div className="relative mt-6">
-              <div className="absolute left-6 top-6 right-6 h-16 rounded-md border border-blue-100 bg-white/60 shadow-sm" />
+              {/* <div className="absolute left-6 top-6 right-6 h-16 rounded-md border border-blue-100 bg-white/60 shadow-sm" />
               <div className="relative rounded-md border border-blue-100 bg-white p-4 shadow-sm">
                 <div className="flex items-center gap-3">
                   <div className="h-10 w-10 rounded-md flex items-center justify-center">
@@ -125,14 +135,17 @@ export default function FeaturesSection() {
                     New Test assigned in Trigonometry. Give test now.
                   </p>
                 </div>
-              </div>
+              </div> */}
             </div>
             <div className="mt-7">
-              <h3 className="text-2xl font-semibold text-neutral-900">Announcement &amp; Notifications</h3>
+              <h3 className="text-2xl font-semibold text-neutral-900">
+                Announcement &amp; Notifications
+              </h3>
               <p className="mt-2 text-md font-redular leading-relaxed text-neutral-700">
-                Send platform-wide announcements, course updates, and important alerts directly from
-                the admin panel. Notifications are delivered in-app and via email—fully branded under
-                your domain.
+                Broadcast announcements, course updates, and critical
+                notifications across the entire platform from within the admin
+                panel. Messages are delivered in-app notifications and email
+                instantly, all branded under your domain.
               </p>
             </div>
           </FeatureCard>
@@ -141,11 +154,14 @@ export default function FeaturesSection() {
           <FeatureCard className="md:col-span-8 bg-[#F7FAFF] p-6 after:bg-[radial-gradient(circle_at_85%_5%,rgba(206,228,255,0.9),transparent_60%),radial-gradient(circle_at_10%_85%,rgba(222,240,255,0.85),transparent_55%)]">
             <div className="flex flex-col gap-8 md:flex-row md:items-center">
               <div className="md:w-1/2">
-                <h3 className="text-2xl font-semibold text-neutral-900">Complete Brand Control</h3>
+                <h3 className="text-2xl font-semibold text-neutral-900">
+                  Complete Brand Control
+                </h3>
                 <p className="mt-2 text-md font-redular leading-relaxed text-neutral-700">
-                  Run the platform entirely under your own identity. Manage custom domains, brand
-                  colors, logos, and communication templates directly from the admin panel—without
-                  exposing the underlying SaaS.
+                  Use the platform completely as your own brand. Custom domains,
+                  colours, logos, and messaging templates in the admin panel,
+                  all while keeping the underlying SaaS technology hidden from
+                  the users.
                 </p>
               </div>
               <div className="md:w-xs md:translate-x-30">
@@ -181,10 +197,14 @@ export default function FeaturesSection() {
                 </div>
               </div>
               <div>
-                <h3 className="text-2xl font-semibold text-neutral-900">Security &amp; Access Control</h3>
+                <h3 className="text-2xl font-semibold text-neutral-900">
+                  Security &amp; Access Control
+                </h3>
                 <p className="mt-2 text-md font-redular leading-relaxed text-neutral-700">
-                  Protect content using device limits, IP monitoring, access logs, and role-based
-                  permissions. Prevent account sharing and maintain platform integrity.
+                  Protect your content with device restrictions, IP tracking,
+                  access logs, and role-based permissions. Prevent account
+                  sharing and protect platform integrity while ensuring access
+                  to authorised users only.
                 </p>
               </div>
             </div>
@@ -193,35 +213,43 @@ export default function FeaturesSection() {
           {/* Payments */}
           <FeatureCard className="md:col-span-6 bg-[#F7FAFF] p-6 after:bg-[radial-gradient(circle_at_80%_10%,rgba(208,229,255,0.9),transparent_60%),radial-gradient(circle_at_15%_90%,rgba(224,240,255,0.85),transparent_55%)]">
             <div className="flex items-center justify-center gap-6 py-4">
-              {["Coming soon", "Coming soon", "Cashfree Payments", "Coming soon", "Coming soon"].map(
-                (label, idx) => (
-                  <div
-                    key={idx}
-                    className={cn(
-                      "h-20 w-20 flex items-center justify-center text-center rounded-full border border-[#CFE0FF] bg-white/80 text-[10px] text-[#2F6BFF] shadow-[0_6px_16px_rgba(31,107,255,0.12)]",
-                      label === "Cashfree Payments" &&
-                        "h-30 w-30 text-xs font-semibold text-neutral-800 bg-white",
-                      idx === 3 && "text-[#88A6FF] opacity-60 bg-white/60",
-                    )}
-                  >
-                    {label !== "Cashfree Payments" ? (
-                      label
-                    ) : (   <Image
-                        src="https://res.cloudinary.com/dyktjldc4/image/upload/v1770815606/Cashfree_Payments_Logo_ar0bxf.jpg"
-                        alt="Cashfree Payments"
-                        width={100}
-                        height={100}
-                      />)}
-                    
-                  </div>
-                ),
-              )}
+              {[
+                "Coming soon",
+                "Coming soon",
+                "Cashfree Payments",
+                "Coming soon",
+                "Coming soon",
+              ].map((label, idx) => (
+                <div
+                  key={idx}
+                  className={cn(
+                    "h-20 w-20 flex items-center justify-center text-center rounded-full border border-[#CFE0FF] bg-white/80 text-[10px] text-[#2F6BFF] shadow-[0_6px_16px_rgba(31,107,255,0.12)]",
+                    label === "Cashfree Payments" &&
+                      "h-30 w-30 text-xs font-semibold text-neutral-800 bg-white",
+                    idx === 3 && "text-[#88A6FF] opacity-60 bg-white/60",
+                  )}
+                >
+                  {label !== "Cashfree Payments" ? (
+                    label
+                  ) : (
+                    <Image
+                      src="https://res.cloudinary.com/dyktjldc4/image/upload/v1770815606/Cashfree_Payments_Logo_ar0bxf.jpg"
+                      alt="Cashfree Payments"
+                      width={100}
+                      height={100}
+                    />
+                  )}
+                </div>
+              ))}
             </div>
             <div className="mt-6">
-              <h3 className="text-xl font-semibold text-neutral-900">Payments &amp; Monetization </h3>
+              <h3 className="text-xl font-semibold text-neutral-900">
+                Payments &amp; Monetization{" "}
+              </h3>
               <p className="mt-2 text-md font-redular leading-relaxed text-neutral-700">
-                Sell courses, bundles, live programs, community access, and mentorship from a single
-                catalog. Built-in payments allow you to scale revenue without external tools.
+                Monetise everything from a unified catalogue, courses, and
+                bundles. The payment infrastructure enables you to manage and
+                scale payments seamlessly without needing any third-party tools.
               </p>
             </div>
           </FeatureCard>

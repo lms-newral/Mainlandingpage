@@ -67,7 +67,7 @@ export default function Footer() {
                   <Link href="#" className="hover:text-black">Integrations</Link>
                   <span className="bg-blue-100 text-[#0066FF] text-[10px] px-2 py-0.5 rounded-full font-bold">NEW</span>
                 </li>
-                <li><Link href="#" className="hover:text-black">Pricing</Link></li>
+                <li><Link href="/pricing" className="hover:text-black">Pricing</Link></li>
               </ul>
             </div>
 

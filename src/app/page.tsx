@@ -4,10 +4,7 @@ import FeaturesSection from "@/components/Sections/FeatureHighlight";
 import HeroSectionOne from "@/components/Sections/Hero";
 import HowItWorksSection from "@/components/Sections/HowItWorks";
 import Reviews from "@/components/Sections/review";
-import { Spotlight } from "@/components/ui/spotlight"; // Aceternity UI
-import { BackgroundBeams } from "@/components/ui/background-beams"; // Aceternity UI
-import FullNavbar from "@/components/ui/navbar";
-import TeamSection from "@/components/Sections/teamsection";
+
 
 export default function Home() {
   return (
