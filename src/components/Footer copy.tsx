@@ -51,7 +51,7 @@ export default function Footer() {
             </p>
             <div className="flex gap-5">
               <Twitter className="h-5 w-5 text-gray-800 hover:text-[#0066FF] cursor-pointer transition-colors" />
-              <Github className="h-5 w-5 text-gray-800 hover:text-[#0066FF] cursor-pointer transition-colors" />
+              {/* <Github className="h-5 w-5 text-gray-800 hover:text-[#0066FF] cursor-pointer transition-colors" /> */}
               <Linkedin className="h-5 w-5 text-gray-800 hover:text-[#0066FF] cursor-pointer transition-colors" />
             </div>
           </div>
