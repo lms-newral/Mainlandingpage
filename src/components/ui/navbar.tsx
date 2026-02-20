@@ -14,6 +14,7 @@ import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 
 export default function FullNavbar() {
+  const demoUrl = "https://cal.com/newralfounder/schedule-synappses-lms-demo?overlayCalendar=true";
   const navItems = [
     { name: "Home", link: "#" },
     { name: "Features", link: "#features" },
@@ -21,7 +22,7 @@ export default function FullNavbar() {
   ];
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
+  
   return (
     <Navbar>
       <NavBody className="max-w-6xl">
@@ -42,7 +43,7 @@ export default function FullNavbar() {
         {/* Desktop Action */}
         <div className="hidden md:flex items-center gap-3">
           <button 
-            onClick={() => window.location.href="https://cal.com/newralfounder/schedule-synappses-lms-demo?overlayCalendar=true"} 
+            onClick={() => window.open(demoUrl, "_blank", "noopener,noreferrer")} 
             className="group flex h-10 items-center justify-center rounded-full bg-[#1F6BFF] px-5 text-[14px] font-bold text-white transition-all hover:bg-[#1855cc] active:scale-95"
           >
             Request Demo
@@ -91,7 +92,7 @@ export default function FullNavbar() {
               </button>
               
               <button 
-                onClick={() => window.location.href="https://cal.com/newralfounder/schedule-synappses-lms-demo?overlayCalendar=true"}
+                onClick={() => window.open(demoUrl, "_blank", "noopener,noreferrer")}
                 className="w-full py-4 rounded-full bg-[#1F6BFF] text-white text-[16px] font-bold shadow-lg shadow-blue-200 active:scale-95 transition-transform"
               >
                 Request Demo

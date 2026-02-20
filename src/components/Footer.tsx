@@ -1,5 +1,4 @@
 "use client";
-
 import React from "react";
 import { Github, X, Linkedin, Instagram } from "lucide-react";
 import Link from "next/link";
@@ -94,13 +93,13 @@ export default function Footer() {
               </a>
 
               {/* Github Link (Optional - keeping it from your previous code) */}
-              <a 
+              {/* <a 
                 href="https://github.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
               >
                 <Github className="h-5 w-5 text-gray-800 hover:text-[#0066FF] transition-colors" />
-              </a>
+              </a> */}
             </div>
           </div>
 
