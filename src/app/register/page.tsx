@@ -176,9 +176,10 @@ export default function Signupflow() {
                 return;
             }
             showToast.success("Account created successfully!");
+            showToast.loading("Redirecting to your admin panel...", 1500);
                 // Redirect to the new tenant's subdomain after a short delay
                 setTimeout(() => {
-                    window.location.href = `https://${response.user?.subdomain}.${process.env.NEXT_PUBLIC_ADMIN_PANAL_URL}`;
+                    window.location.href = `https://${response.user?.subdomain}${process.env.NEXT_PUBLIC_ADMIN_PANAL_URL}/auth/signin`;
                 }, 1500);
 
         } catch (error) {
