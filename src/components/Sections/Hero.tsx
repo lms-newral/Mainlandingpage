@@ -45,7 +45,6 @@ export default function HeroSectionOne() {
             <span className="flex -tracking-[0.05em] items-center font-medium text-xs gap-2">
               AI Course Generation
             </span>
-            {/* <ChevronRight className="h-3 w-3 text-[#1863FF] transition-transform group-hover:translate-x-1" /> */}
           </motion.div>
 
           <motion.h1
@@ -70,15 +69,15 @@ export default function HeroSectionOne() {
           </motion.p>
 
           <div className="mt-6 flex w-full max-w-xs items-center justify-center gap-3 sm:max-w-none sm:gap-5">
-            <a
-              href="https://cal.com/newralfounder/schedule-synappses-lms-demo?overlayCalendar=true"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex h-10 flex-1 items-center justify-center gap-1.5 rounded-full bg-[#1F6BFF] px-4 text-sm font-medium text-white transition-all active:scale-95 sm:h-12 sm:flex-none sm:gap-2 sm:px-6 sm:text-base"
+            
+            {/* FIXED: Changed from <a> to <Link> for internal redirection */}
+            <Link
+              href="/RequestDemo"
+              className="group flex h-10 flex-1 items-center justify-center gap-1.5 rounded-full bg-[#1F6BFF] px-4 text-sm font-medium text-white transition-all active:scale-95 sm:h-12 sm:flex-none sm:gap-2 sm:px-6 sm:text-base"
             >
-              Book demo
+              Request demo
               <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </a>
+            </Link>
 
             <Link
               href="/pricing"
