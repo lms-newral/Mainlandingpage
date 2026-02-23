@@ -63,7 +63,7 @@ export const Navbar = ({ children, className }: NavbarProps) => {
     <motion.div
       ref={ref}
       // IMPORTANT: Change this to class of `fixed` if you want the navbar to be fixed
-      className={cn("fixed inset-x-0 top-10 z-40 round-xl w-full", className)}
+      className={cn("fixed inset-x-0 top-3 sm:top-4 lg:top-10 z-40 rounded-xl w-full", className)}
     >
       {React.Children.map(children, (child) =>
         React.isValidElement(child)
@@ -110,7 +110,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
     <motion.div
       onMouseLeave={() => setHovered(null)}
       className={cn(
-        "absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-sm font-medium text-[#6B7280] transition duration-200 hover:text-[#111827] lg:flex lg:space-x-2",
+        "pointer-events-none absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-sm font-medium text-[#6B7280] transition duration-200 hover:text-[#111827] lg:flex lg:space-x-2",
         className,
       )}
     >
@@ -118,7 +118,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
         <a
           onMouseEnter={() => setHovered(idx)}
           onClick={onItemClick}
-          className="relative px-4 py-2 text-[#6B7280]"
+          className="pointer-events-auto relative px-4 py-2 text-[#6B7280]"
           key={`link-${idx}`}
           href={item.link}
         >
