@@ -66,9 +66,21 @@ export default function PricingFAQ() {
           </div>
         </div>
 
+<<<<<<< HEAD
         <div className="lg:w-2/3 flex flex-col border-t lg:border-t-0 border-gray-100">
           {pricingFaqs.map((faq, index) => {
             const isOpen = openIndex === index;
+=======
+        <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-12 lg:gap-12">
+          
+          {/* Left Column - CTA Card */}
+          <div className="lg:col-span-5 lg:sticky lg:top-24">
+            <div className="relative overflow-hidden rounded-[2rem] border border-blue-100 bg-[#F7FAFF] p-8  md:p-10">
+              
+              {/* Decorative background gradients */}
+              <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-blue-200/50 blur-3xl"></div>
+              <div className="absolute -bottom-20 -left-20 h-64 w-64 rounded-full bg-indigo-200/40 blur-3xl"></div>
+>>>>>>> a7148ab (fix: pricing page changes)
 
             return (
               <div key={index} className="border-b border-gray-100">
@@ -105,8 +117,40 @@ export default function PricingFAQ() {
                   )}
                 </AnimatePresence>
               </div>
+<<<<<<< HEAD
             );
           })}
+=======
+            </div>
+          </div>
+
+          {/* Right Column - Accordion */}
+          <div className="lg:col-span-7">
+            <Accordion
+              type="single"
+              collapsible
+              defaultValue="item-1"
+              className="w-full space-y-4"
+            >
+              {faqs.map((faq) => (
+                <AccordionItem
+                  key={faq.value}
+                  value={faq.value}
+                  className="group rounded-2xl border border-slate-200 bg-white px-5 transition-all duration-200 ease-in-out hover:border-blue-300 data-[state=open]:border-blue-200 data-[state=open]:bg-blue-50/30 sm:px-6"
+                >
+                  <AccordionTrigger className="py-5 text-left hover:no-underline sm:py-6">
+                    <span className="text-base font-semibold leading-relaxed tracking-tight text-neutral-900 group-data-[state=open]:text-blue-700 sm:text-lg">
+                      {faq.q}
+                    </span>
+                  </AccordionTrigger>
+                  <AccordionContent className="pb-6 text-base leading-relaxed text-slate-600 sm:text-[17px]">
+                    {faq.a}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+>>>>>>> a7148ab (fix: pricing page changes)
         </div>
       </div>
     </section>
