@@ -1,10 +1,11 @@
 "use client";
 
+import type { Dispatch, SetStateAction } from "react";
 import { motion } from "framer-motion";
 
 interface PricingHeaderProps {
   isAnnual: boolean;
-  setIsAnnual: (val: boolean) => void;
+  setIsAnnual: Dispatch<SetStateAction<boolean>>;
 }
 
 export default function PricingHeader({ isAnnual, setIsAnnual }: PricingHeaderProps) {

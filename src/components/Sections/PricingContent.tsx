@@ -1,56 +1,107 @@
 "use client";
 
-import { Check, Sparkles } from "lucide-react";
-import { useState } from "react";
-import { motion } from "framer-motion";
+import { Check } from "lucide-react";
 
 const plans = [
   {
     name: "Starter",
-    price: "$10",
+    monthlyPrice: 10,
+    buttonText: "Start with Starter",
     description: "Perfect for developers building web agents and data workflows.",
-    features: ["Parse API", "Up to 5 seats for Reducto Studio", "Parse API", "Up to 5 seats for Reducto Studio", "Up to 5 seats for Reducto Studio", "Up to 5 seats for Reducto Studio", "Up to 5 seats for Reducto Studio"],
+    features: [
+      "Parse API",
+      "Up to 5 seats for Reducto Studio",
+      "Custom workflows",
+      "Email support",
+    ],
   },
   {
     name: "Beginner",
-    price: "$50",
+    monthlyPrice: 50,
+    buttonText: "Get Started with Beginner",
     isPopular: true,
     description: "Perfect for developers building web agents and data workflows.",
-    features: ["Parse API", "Up to 5 seats for Reducto Studio", "Parse API", "Up to 5 seats for Reducto Studio", "Up to 5 seats for Reducto Studio", "Up to 5 seats for Reducto Studio", "Up to 5 seats for Reducto Studio"],
+    features: [
+      "Everything in Starter",
+      "Up to 50 seats for Reducto Studio",
+      "Priority processing",
+      "Priority support",
+    ],
   },
   {
     name: "Enterprise",
-    price: "$90",
+    monthlyPrice: 90,
+    buttonText: "Contact Sales",
     description: "Perfect for developers building web agents and data workflows.",
-    features: ["Parse API", "Up to 5 seats for Reducto Studio", "Parse API", "Up to 5 seats for Reducto Studio", "Up to 5 seats for Reducto Studio", "Up to 5 seats for Reducto Studio", "Up to 5 seats for Reducto Studio"],
-  }
+    features: [
+      "Everything in Beginner",
+      "Unlimited seats",
+      "Dedicated account manager",
+      "Custom SLAs and security reviews",
+    ],
+  },
 ];
 
 export default function PricingContent({ isAnnual }: { isAnnual: boolean }) {
   return (
-    /* FIXED: pb-8 ensures there isn't a massive gap before the next section */
-    <section className="relative z-20 mx-auto w-full max-w-[1362px] px-4 pb-8 -mt-32 md:-mt-64 lg:px-8">
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-3 lg:gap-[24px]">
+    <section className="relative mx-auto -mt-28 w-full max-w-7xl px-4 pb-24 sm:px-6 lg:px-8 font-manrope">
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-6 lg:gap-8 max-w-6xl mx-auto">
         {plans.map((plan, index) => {
           const isMiddle = index === 1;
-          const displayPrice = isAnnual ? `$${parseInt(plan.price.replace('$', '')) * 0.8}` : plan.price;
+          const displayPrice = isAnnual
+            ? Math.round(plan.monthlyPrice * 0.8)
+            : plan.monthlyPrice;
 
           return (
-            <div key={plan.name} className={`flex flex-col rounded-[2.5rem] p-8 lg:p-10 transition-all duration-300 hover:-translate-y-2 ${isMiddle ? "bg-[#0055FF] text-white shadow-2xl scale-100 md:scale-105 z-10" : "border border-gray-100 bg-white text-gray-900 shadow-xl"}`}>
-              <div className="mb-4 flex items-center justify-between">
-                <h3 className="text-xl font-medium">{plan.name}</h3>
-                {plan.isPopular && <span className="rounded-full bg-white px-3 py-1 text-[11px] font-bold text-black">Most popular</span>}
+            <div
+              key={plan.name}
+              className={`relative flex flex-col rounded-[2rem] p-8 transition-all duration-300 hover:-translate-y-2 lg:p-10 ${isMiddle
+                ? "bg-gradient-to-b from-blue-600 to-indigo-700 text-white shadow-[0_20px_40px_-15px_rgba(37,99,235,0.5)] border-0 scale-100 md:scale-105 z-10"
+                : "border border-slate-200 bg-white text-neutral-900 shadow-lg shadow-slate-200/40"
+                }`}
+            >
+              {/* Plan Header */}
+              <div className="mb-5 flex items-center justify-between gap-3">
+                <h3 className={`text-xl font-bold ${isMiddle ? "text-white" : "text-neutral-900"}`}>
+                  {plan.name}
+                </h3>
+                {plan.isPopular && (
+                  <span className="rounded-full bg-white/20 backdrop-blur-md px-3 py-1 text-[11px] font-bold tracking-wide text-white uppercase border border-white/20">
+                    Most Popular
+                  </span>
+                )}
               </div>
 
               <div className="mb-4 flex items-baseline">
-                <span className="text-5xl font-medium tracking-tight">{displayPrice}</span>
-                <span className={`ml-1 text-sm ${isMiddle ? "text-blue-200" : "text-gray-400"}`}>{isAnnual ? "/yearly" : "/monthly"}</span>
+                <span className="text-5xl font-medium tracking-tight">
+                  ${displayPrice}
+                </span>
+                <span
+                  className={`ml-1 text-sm ${isMiddle ? "text-blue-200" : "text-gray-400"}`}
+                >
+                  /mo
+                </span>
               </div>
+              <p
+                className={`mb-2 text-sm ${isMiddle ? "text-blue-200" : "text-slate-500"}`}
+              >
+                {isAnnual ? "Billed annually" : "Billed monthly"}
+              </p>
 
-              <p className={`mb-8 min-h-[48px] text-[15px] leading-relaxed ${isMiddle ? "text-blue-100" : "text-gray-500"}`}>{plan.description}</p>
+              <p
+                className={`my-6 min-h-[48px] text-[15px] leading-relaxed ${isMiddle ? "text-blue-100" : "text-slate-600"}`}
+              >
+                {plan.description}
+              </p>
 
-              <button className={`w-full py-3.5 rounded-full text-[15px] font-medium mb-10 transition-all ${isMiddle ? "bg-white text-black hover:bg-gray-50" : "bg-black text-white hover:bg-gray-800"}`}>
-                Book plan
+              {/* CTA Button */}
+              <button
+                className={`w-full py-4 rounded-full text-[15px] font-bold transition-all duration-200 mb-8 ${isMiddle
+                  ? "bg-white text-blue-700 hover:bg-slate-50 hover:shadow-lg active:scale-95"
+                  : "bg-neutral-900 text-white hover:bg-neutral-800 hover:shadow-lg active:scale-95"
+                  }`}
+              >
+                {plan.buttonText}
               </button>
 
               <div className="flex-1">
