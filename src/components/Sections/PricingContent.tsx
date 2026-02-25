@@ -128,6 +128,7 @@ export default function PricingContent() {
       <div className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-6 lg:gap-8 max-w-6xl mx-auto">
         {plans.map((plan, index) => {
           const isMiddle = index === 1;
+          const displayPrice = isAnnual ? `$${parseInt(plan.price.replace('$', '')) * 0.8}` : plan.price;
 
           return (
             <div

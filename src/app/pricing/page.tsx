@@ -1,28 +1,29 @@
+"use client";
+
+import { useState } from "react";
 import Footer from "@/components/Footer";
-import PricingHeader from "@/components/Sections/PricingHeader"; // Added the import for the Pricing Header
+import PricingHeader from "@/components/Sections/PricingHeader";
 import PricingContent from "@/components/Sections/PricingContent";
 import BrandedAppCTA from "@/components/Sections/BrandedAppCTA";
 import PricingFAQ from "@/components/Sections/PricingFAQ";
 
 export default function PricingPage() {
+  // 1. Lift state here so both Header and Content use the same toggle value
+  const [isAnnual, setIsAnnual] = useState(true);
+
   return (
     <main className="flex flex-col min-h-screen bg-[#FAFAFA]">
-    <div
-        className="absolute inset-0 z-0"
-        style={{
-          background: "radial-gradient(125% 125% at 50% 10%, #fff 40%, #5397FF 100%)",
-        }}
-      />
-      <PricingContent />
       
-      {/* <TrustedCompanies /> */}
+      {/* 2. Pass state and setter to Header */}
+      <PricingHeader isAnnual={isAnnual} setIsAnnual={setIsAnnual} />
       
-      {/* Added the Branded App section */}
+      {/* 3. Pass state to Content to update prices */}
+      <PricingContent isAnnual={isAnnual} />
+      
       <div className="mt-12">
         <BrandedAppCTA />
       </div>
       
-      {/* Added the new Pricing FAQ section with a white background wrap to separate it */}
       <div className="mt-12 bg-white rounded-t-[3rem] shadow-[0_-10px_40px_rgba(0,0,0,0.02)]">
         <PricingFAQ />
       </div>
