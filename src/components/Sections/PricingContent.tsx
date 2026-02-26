@@ -1,6 +1,8 @@
 "use client";
 
-import { Check } from "lucide-react";
+import { Check, Sparkles } from "lucide-react";
+import { useState } from "react";
+import { motion } from "framer-motion";
 
 const plans = [
   {
@@ -42,7 +44,9 @@ const plans = [
   },
 ];
 
-export default function PricingContent({ isAnnual }: { isAnnual: boolean }) {
+export default function PricingContent() {
+  const [isAnnual, setIsAnnual] = useState(true);
+
   return (
     <section className="relative mx-auto -mt-28 w-full max-w-7xl px-4 pb-24 sm:px-6 lg:px-8 font-manrope">
       <div className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-6 lg:gap-8 max-w-6xl mx-auto">
@@ -104,17 +108,34 @@ export default function PricingContent({ isAnnual }: { isAnnual: boolean }) {
                 {plan.buttonText}
               </button>
 
+              {/* Divider */}
+              <div className={`w-full h-px mb-8 ${isMiddle ? "bg-white/15" : "bg-slate-100"}`}></div>
+
+              {/* Features List */}
               <div className="flex-1">
-                <p className={`text-sm font-medium mb-5 ${isMiddle ? "text-white" : "text-gray-900"}`}>Features</p>
-                <ul className="space-y-4 text-[14px]">
+                <p
+                  className={`text-sm font-bold tracking-wide uppercase mb-6 ${isMiddle ? "text-white" : "text-neutral-900"
+                    }`}
+                >
+                  What&apos;s included
+                </p>
+                <ul className="space-y-4 text-[15px]">
                   {plan.features.map((feature, i) => (
-                    <li key={i} className="flex items-start gap-[10px]">
+                    <li key={i} className="flex items-start gap-3">
                       {isMiddle ? (
-                        <div className="shrink-0 w-5 h-5 rounded-full bg-white flex items-center justify-center mt-0.5"><Check className="w-3.5 h-3.5 text-[#0055FF]" strokeWidth={3} /></div>
+                        <div className="shrink-0 w-5 h-5 rounded-full bg-white/20 flex items-center justify-center mt-0.5">
+                          <Check className="w-3.5 h-3.5 text-white" strokeWidth={3} />
+                        </div>
                       ) : (
-                        <Check className="shrink-0 w-5 h-5 text-[#34C759] mt-0.5" strokeWidth={2.5} />
+                        <div className="shrink-0 w-5 h-5 rounded-full bg-blue-100 flex items-center justify-center mt-0.5">
+                          <Check className="w-3.5 h-3.5 text-blue-600" strokeWidth={3} />
+                        </div>
                       )}
-                      <span className={isMiddle ? "text-blue-50" : "text-gray-600"}>{feature}</span>
+                      <span
+                        className={`font-medium leading-snug ${isMiddle ? "text-blue-50" : "text-slate-600"}`}
+                      >
+                        {feature}
+                      </span>
                     </li>
                   ))}
                 </ul>

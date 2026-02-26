@@ -1,10 +1,17 @@
 "use client";
 
-import { useState } from "react";
-import { ChevronDown } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import React from "react";
+import Image from "next/image";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { MessageCircleQuestion, ArrowRight, Sparkles } from "lucide-react";
 
-const pricingFaqs = [
+// Upgraded, high-quality FAQs focusing on enterprise features, security, and scaling.
+const faqs = [
   {
     question: "Why would I use this?",
     answer:
@@ -37,13 +44,7 @@ const pricingFaqs = [
   },
 ];
 
-export default function PricingFAQ() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-  const toggleFaq = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
+export default function FAQSection() {
   return (
     /* FIXED: Adjusted padding to sit better within the white rounded container */
     <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-16 pb-24">
@@ -64,11 +65,27 @@ export default function PricingFAQ() {
               Contact our support team
             </a>
           </div>
+          <h2 className="mb-6 text-3xl font-bold leading-tight tracking-tight text-neutral-900 sm:text-4xl md:text-5xl lg:text-[56px]">
+            All your questions, <br />
+            <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+              answered clearly.
+            </span>
+          </h2>
+          <p className="mx-auto max-w-2xl text-base font-medium leading-relaxed text-slate-500 sm:text-lg md:text-xl">
+            Everything you need to know about launching, securing, and scaling
+            your educational platform with Synappses.
+          </p>
         </div>
 
-        <div className="lg:w-2/3 flex flex-col border-t lg:border-t-0 border-gray-100">
-          {pricingFaqs.map((faq, index) => {
-            const isOpen = openIndex === index;
+        <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-12 lg:gap-12">
+          
+          {/* Left Column - CTA Card */}
+          <div className="lg:col-span-5 lg:sticky lg:top-24">
+            <div className="relative overflow-hidden rounded-[2rem] border border-blue-100 bg-[#F7FAFF] p-8 shadow-xl shadow-blue-900/5 md:p-10">
+              
+              {/* Decorative background gradients */}
+              <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-blue-200/50 blur-3xl"></div>
+              <div className="absolute -bottom-20 -left-20 h-64 w-64 rounded-full bg-indigo-200/40 blur-3xl"></div>
 
             return (
               <div key={index} className="border-b border-gray-100">
@@ -105,8 +122,35 @@ export default function PricingFAQ() {
                   )}
                 </AnimatePresence>
               </div>
-            );
-          })}
+            </div>
+          </div>
+
+          {/* Right Column - Accordion */}
+          <div className="lg:col-span-7">
+            <Accordion
+              type="single"
+              collapsible
+              defaultValue="item-1"
+              className="w-full space-y-4"
+            >
+              {faqs.map((faq) => (
+                <AccordionItem
+                  key={faq.value}
+                  value={faq.value}
+                  className="group rounded-2xl border border-slate-200 bg-white px-5 transition-all duration-200 ease-in-out hover:border-blue-300 hover:shadow-md data-[state=open]:border-blue-200 data-[state=open]:bg-blue-50/30 data-[state=open]:shadow-sm sm:px-6"
+                >
+                  <AccordionTrigger className="py-5 text-left hover:no-underline sm:py-6">
+                    <span className="text-base font-semibold leading-relaxed tracking-tight text-neutral-900 group-data-[state=open]:text-blue-700 sm:text-lg">
+                      {faq.q}
+                    </span>
+                  </AccordionTrigger>
+                  <AccordionContent className="pb-6 text-base leading-relaxed text-slate-600 sm:text-[17px]">
+                    {faq.a}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
         </div>
       </div>
     </section>

@@ -75,7 +75,7 @@ export default function FAQSection() {
           
           {/* Left Column - CTA Card */}
           <div className="lg:col-span-5 lg:sticky lg:top-24">
-            <div className="relative overflow-hidden rounded-[2rem] border border-blue-100 bg-[#F7FAFF] p-8 shadow-blue-900/5 md:p-10">
+            <div className="relative overflow-hidden rounded-[2rem] border border-blue-100 bg-[#F7FAFF] p-8 shadow-xl shadow-blue-900/5 md:p-10">
               
               {/* Decorative background gradients */}
               <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-blue-200/50 blur-3xl"></div>
