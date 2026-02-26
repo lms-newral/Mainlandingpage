@@ -1,11 +1,7 @@
 "use client";
 
-<<<<<<< HEAD
-import type { Dispatch, SetStateAction } from "react";
-=======
 import React from "react";
 import { Check, Sparkles } from "lucide-react";
->>>>>>> a7148ab (fix: pricing page changes)
 import { motion } from "framer-motion";
 
 const plans = [
@@ -60,10 +56,6 @@ const plans = [
 
 type PricingHeaderProps = {
   isAnnual: boolean;
-<<<<<<< HEAD
-  setIsAnnual: Dispatch<SetStateAction<boolean>>;
-}
-=======
   setIsAnnual: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
@@ -71,7 +63,6 @@ export default function PricingHeader({
   isAnnual,
   setIsAnnual,
 }: PricingHeaderProps) {
->>>>>>> a7148ab (fix: pricing page changes)
 
   return (
     <div className="min-h-full bg-white font-manrope">
