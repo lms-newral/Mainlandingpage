@@ -16,7 +16,7 @@ const testimonials = [
     quote: "The best LMS interface I've used in years. Simple and fast.", 
     name: "Alex Rivera", 
     role: "Product Designer",
-    company: "Design Studio"
+    company: "Design Studio" 
   },
   { 
     quote: "Our student engagement increased by 40% after switching.", 
