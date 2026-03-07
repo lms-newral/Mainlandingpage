@@ -4,6 +4,25 @@ import React from "react";
 
 export default function DemoHero() {
   const calUrl = "https://cal.com/newralfounder/schedule-synappses-lms-demo?embed=true";
+  const reviews = [
+    {
+      id: 2,
+      companylogo:
+        "https://res.cloudinary.com/dyktjldc4/image/upload/v1771585846/image_31_mugdyt.svg",
+    },
+
+    {
+      id: 1,
+      companylogo:
+        "https://res.cloudinary.com/dyktjldc4/image/upload/v1769785961/Frame_1171276569_xkt1ci.png",
+    },
+
+    {
+      id: 3,
+      companylogo:
+        "https://res.cloudinary.com/djwzwq4cu/image/upload/v1770440498/Untitled_pemkwn.png",
+    },
+  ];
 
   return (
     <section
@@ -89,11 +108,17 @@ export default function DemoHero() {
                 Trusted by fast-growing companies around the world
               </p>
               <div className="flex flex-wrap gap-4">
-                {[1, 2, 3].map((i) => (
+                {reviews.map((item) => (
                   <div
-                    key={i}
-                    className="h-12 w-32 bg-gray-100 rounded-xl animate-pulse"
-                  />
+                    key={item.id} // Better to use item.id than index i
+                    className="h-12 w-32 rounded-xl flex items-center justify-center overflow-hidden sm:h-10"
+                  >
+                    <img
+                      src={item.companylogo}
+                      alt="Company Logo"
+                      className="h-full w-full object-contain"
+                    />
+                  </div>
                 ))}
               </div>
             </div>

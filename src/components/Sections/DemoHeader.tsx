@@ -16,11 +16,11 @@ export default function DemoHeader() {
         </motion.div>
       </div>
       
-      <h1 className="mt-8 text-5xl md:text-7xl font-bold tracking-tighter text-gray-900">
+      <h1 className="mt-8 text-5xl md:text-7xl font-medium tracking-tighter text-gray-900">
         Request a Demo
       </h1>
 
-      <p className="mt-6 text-gray-500 max-w-2xl text-lg md:text-xl">
+      <p className="mt-6 text-gray-800 max-w-lg font-medium text-lg md:text-xl">
         Synappses grows with you. Choose the products your organization needs today.
       </p>
     </section>

@@ -22,7 +22,6 @@ export default function FullNavbar() {
     { name: "Home", link: "/" },
     { name: "Features", link: "/#features" },
     { name: "How it works", link: "/#how-it-works" },
-    { name: "Courses", link: "/courses/ai-engineer-2026" }, // New link added here
   ];
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

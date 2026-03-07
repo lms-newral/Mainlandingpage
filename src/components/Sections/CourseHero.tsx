@@ -25,7 +25,7 @@ export default function CourseHero() {
   };
 
   return (
-    <section className="relative flex w-full flex-col items-start justify-between gap-8 bg-[linear-gradient(to_bottom_right,_#0066FF,_#ABCDFF)] px-4 pt-14 sm:px-6 sm:pt-20 md:flex-row md:items-end md:gap-10 md:px-10 md:pt-32 lg:px-12 lg:pt-40">
+    <section className="relative flex w-full flex-col items-start justify-between gap-8 bg-[linear-gradient(to_bottom_right,#0066FF,#ABCDFF)] px-4 pt-14 sm:px-6 sm:pt-20 md:flex-row md:items-end md:gap-10 md:px-10 md:pt-32 lg:px-12 lg:pt-40">
       <div className="w-full max-w-2xl space-y-6 pb-8 text-white sm:pb-12 md:pb-24">
         <div className="inline-block px-3 py-1 bg-white/20 rounded-xl text-xs font-bold tracking-widest">
           Professional

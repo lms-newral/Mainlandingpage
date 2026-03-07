@@ -97,10 +97,10 @@ export default function Curriculum() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="relative w-full overflow-hidden rounded-[28px] bg-[radial-gradient(circle_at_top,_#FFFFFF_0%,_#F4F5F8_65%,_#ECEEF2_100%)] px-4 py-12 sm:px-6 sm:py-16 md:px-10 md:py-20">
+    <section className="relative w-full overflow-hidden rounded-[28px] bg-[radial-gradient(circle_at_top,_#FFFFFF_0%,_#F4F5F8_65%,_#ECEEF2_100%)] px-4 py-12 font-sans sm:px-6 sm:py-16 md:px-10 md:py-20">
       <div className="mx-auto w-full max-w-[1180px]">
         <header className="mx-auto max-w-3xl text-center">
-          <h2 className="font-manrope text-4xl font-semibold tracking-tight text-black sm:text-5xl">
+          <h2 className="text-4xl font-semibold tracking-tight text-black sm:text-5xl">
             Curriculum
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-neutral-600 sm:text-[20px]">
@@ -145,7 +145,7 @@ export default function Curriculum() {
                       <p className="text-lg font-semibold uppercase tracking-[0.06em] text-neutral-500">
                         {module.moduleLabel}
                       </p>
-                      <h3 className="mt-2 font-manrope text-[36px] font-semibold leading-tight tracking-tight text-neutral-900 sm:text-[52px]">
+                      <h3 className="mt-2 text-[36px] font-semibold leading-tight tracking-tight text-neutral-900 sm:text-[52px]">
                         {module.title}
                       </h3>
                     </div>
