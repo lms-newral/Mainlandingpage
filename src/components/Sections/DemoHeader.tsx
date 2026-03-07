@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function DemoHeader() {
   return (
-    <section className="relative w-full min-h-[400px] pt-32 pb-10 px-4 flex flex-col items-center text-center bg-[linear-gradient(180deg,_#FFFFFF_0%,_#F3F7FF_100%)]">
+    <section className="relative w-full min-h-200 pt-32 pb-10 px-4 flex flex-col items-center text-center bg-[linear-gradient(180deg,#FFFFFF_0%,#F3F7FF_100%)]">
       <div className="flex flex-col items-center">
         <motion.div
           initial={{ opacity: 0, y: -10 }}
@@ -16,11 +16,11 @@ export default function DemoHeader() {
         </motion.div>
       </div>
       
-      <h1 className="mt-8 text-5xl md:text-7xl font-bold tracking-tighter text-gray-900">
+      <h1 className="mt-8 text-5xl md:text-7xl font-medium tracking-tighter text-gray-900">
         Request a Demo
       </h1>
 
-      <p className="mt-6 text-gray-500 max-w-2xl text-lg md:text-xl">
+      <p className="mt-6 text-gray-800 max-w-lg font-medium text-lg md:text-xl">
         Synappses grows with you. Choose the products your organization needs today.
       </p>
     </section>

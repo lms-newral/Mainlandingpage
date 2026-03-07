@@ -80,7 +80,7 @@ export default function PricingHeader({
           </span>
         </h1>
 
-        <p className="mt-6 font-medium text-gray-600 max-w-2xl mx-auto text-lg md:text-[20px] leading-snug">
+        <p className="mt-6 font-medium text-gray-600 max-w-xl mx-auto text-lg md:text-[20px] leading-snug">
           Synappses grows with you. Choose the products your organization needs
           today.
         </p>
