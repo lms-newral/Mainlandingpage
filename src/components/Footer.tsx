@@ -51,7 +51,7 @@ export default function Footer() {
             </div>
 
             <a
-              href="https://cal.com/newralfounder/schedule-synappses-lms-demo?overlayCalendar=true"
+              href="/pricing"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white text-[#0066FF] px-8 py-4 rounded-xl font-semibold text-base hover:scale-105 transition-transform active:scale-95"

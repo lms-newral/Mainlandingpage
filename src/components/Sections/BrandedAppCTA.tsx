@@ -2,8 +2,10 @@
 
 import { CheckCircle2 } from "lucide-react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function BrandedAppCTA() {
+  const router = useRouter();
   const features = [
     "Custom branding and design",
     "Analytics integration",
@@ -41,9 +43,11 @@ export default function BrandedAppCTA() {
                   {feature}
                 </li>
               ))}
-            </ul>
-
-            <button className="group mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#0066FF] px-8 py-4 text-[16px] font-bold text-white shadow-lg transition-all hover:bg-blue-700 active:scale-95 md:w-fit">
+            </ul>  
+            <button
+              onClick={() => router.push("/pricing")}
+              className="group mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#0066FF] px-8 py-4 text-[16px] font-bold text-white shadow-lg transition-all hover:bg-blue-700 active:scale-95 md:w-fit"
+            >
               Get started
               <span className="text-xl transition-transform group-hover:translate-x-1">›</span>
             </button>

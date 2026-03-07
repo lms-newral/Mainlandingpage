@@ -78,7 +78,7 @@ export default function PricingFAQ() {
               </p>
 
               <a
-                href="https://cal.com/newralfounder/schedule-synappses-lms-demo?overlayCalendar=true"
+                href="/pricing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group mt-4 inline-flex items-center justify-center gap-2 rounded-full bg-blue-600 px-6 py-3.5 text-base font-semibold text-white transition-all hover:bg-blue-700 active:scale-95"
