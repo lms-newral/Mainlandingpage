@@ -11,7 +11,7 @@ export default function PricingPage() {
   const [isAnnual, setIsAnnual] = useState(true);
 
   return (
-    <main className="flex flex-col  min-h-screen bg-[#FAFAFA] font-sans antialiased">
+    <main className="flex flex-col  min-h-screen font-sans antialiased">
       
       {/* 2. Pass state and setter to Header */}
       <PricingHeader isAnnual={isAnnual} setIsAnnual={setIsAnnual} />

@@ -13,7 +13,7 @@ export default function RequestDemoPage() {
         <DemoHeader />
 
         {/* 2. Hero Section: intentionally overlaps header */}
-        <div className="-mt-28 md:-mt-50">
+        <div className="-mt-28 md:-mt-60">
           <DemoHero />
         </div>
       </section>

@@ -44,13 +44,13 @@ export default function BrandedAppCTA() {
                 </li>
               ))}
             </ul>  
-            <button
+            {/* <button
               onClick={() => router.push("/pricing")}
               className="group mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#0066FF] px-8 py-4 text-[16px] font-bold text-white shadow-lg transition-all hover:bg-blue-700 active:scale-95 md:w-fit"
             >
               Get started
               <span className="text-xl transition-transform group-hover:translate-x-1">›</span>
-            </button>
+            </button> */}
           </div>
 
           <div className="relative flex w-full justify-center md:justify-end self-end px-4 md:px-0">

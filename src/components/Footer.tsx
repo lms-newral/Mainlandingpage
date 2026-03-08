@@ -3,6 +3,7 @@ import React from "react";
 import { Github, X, Linkedin, Instagram } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const XIcon = ({ className }: { className?: string }) => (
   <svg
@@ -17,12 +18,13 @@ const XIcon = ({ className }: { className?: string }) => (
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const router = useRouter();
 
   return (
-    <footer className="w-full bg-white pt-34">
+    <footer className="w-full bg-white pt-16 md:pt-34">
       <div className="max-w-7xl mx-auto px-6">
         {/* --- BLUE CTA BANNER --- */}
-        <div className="relative overflow-hidden rounded-[2rem] bg-linear-to-r from-[#0066FF] to-[#99C2FF] p-8 md:p-16 -mb-30">
+        <div className="relative overflow-hidden rounded-[2rem] bg-linear-to-r from-[#0066FF] to-[#99C2FF] p-8 md:p-16 -mb-16 md:-mb-30">
           {/* Abstract Watermark Pattern */}
           <div className="absolute right-0 top-0 h-full w-1/2 opacity-10 pointer-events-none">
             <svg
@@ -38,7 +40,7 @@ export default function Footer() {
             </svg>
           </div>
 
-          <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+          <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
             <div className="max-w-2xl text-left">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">
                 Start your teaching <br className="hidden md:block" /> journey
@@ -51,20 +53,19 @@ export default function Footer() {
             </div>
 
             <a
-              href="/pricing"
+              onClick={() => router.push("/RequestDemo")}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-white text-[#0066FF] px-8 py-4 rounded-xl font-semibold text-base hover:scale-105 transition-transform active:scale-95"
+              className="self-start md:self-auto bg-white text-[#0066FF] px-8 py-4 rounded-xl font-semibold text-base hover:scale-105 transition-transform active:scale-95"
             >
               Schedule Demo
             </a>
           </div>
         </div>
-
       </div>
 
       {/* --- FOOTER LINKS SECTION --- */}
-      <div className="w-full bg-[#EDF4FF] min-h-131 pt-40">
+      <div className="w-full bg-[#EDF4FF] min-h-131 pt-24 md:pt-40">
         <div className="max-w-7xl mx-auto px-6 pt-16 h-full flex flex-col">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12 pb-16">
             {/* Logo and Intro */}
