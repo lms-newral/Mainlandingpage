@@ -7,6 +7,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { ArrowRight, MessageCircleQuestion, Sparkles } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 const faqs = [
   {
@@ -42,6 +43,7 @@ const faqs = [
 ];
 
 export default function PricingFAQ() {
+  const router = useRouter();
   return (
     <section className="mx-auto max-w-7xl px-4 pb-24 pt-16 sm:px-6 lg:px-8">
       <div className="mx-auto mb-12 flex max-w-3xl flex-col items-center text-center sm:mb-16">
@@ -73,25 +75,30 @@ export default function PricingFAQ() {
               </h3>
 
               <p className="text-base leading-relaxed text-slate-600">
-                Talk to our team and get recommendations based on your learner volume,
-                content strategy, and growth goals.
+                Talk to our team and get recommendations based on your learner
+                volume, content strategy, and growth goals.
               </p>
 
-              <a
-                href="/pricing"
+              {/* <a
+                onClick={() => router.push("/RequestDemo")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group mt-4 inline-flex items-center justify-center gap-2 rounded-full bg-blue-600 px-6 py-3.5 text-base font-semibold text-white transition-all hover:bg-blue-700 active:scale-95"
               >
                 Request a Demo
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
 
         <div className="lg:col-span-7">
-          <Accordion type="single" collapsible defaultValue="item-1" className="w-full space-y-4">
+          <Accordion
+            type="single"
+            collapsible
+            defaultValue="item-1"
+            className="w-full space-y-4"
+          >
             {faqs.map((faq) => (
               <AccordionItem
                 key={faq.value}

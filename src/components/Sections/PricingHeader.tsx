@@ -1,39 +1,61 @@
 "use client";
 
 import React from "react";
-import { Check, Sparkles } from "lucide-react";
+import { Check, Sparkles, X } from "lucide-react";
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 const plans = [
   {
     name: "Basic",
-    price: { monthly: "$49", annual: "$39" },
+    price: { monthly: "$30", annual: "$25" },
     period: "/month",
     description: "For individuals and small teams just getting started.",
     buttonText: "Start with Basic",
     isPopular: false,
     features: [
       "Up to 500 active learners",
-      "Basic drag & drop course builder",
-      "Standard payment gateways (Stripe/Razorpay)",
-      "Standard email support",
+      "Custom Sub domain",
+      "Full White Label",
+      "100 GB file Upload/ Month",
       "Basic analytics dashboard",
+      "Standard email support",
+    ],
+    exfeatures: [
+      "Advanced test scheduling cohorts",
+      "Native mobile apps (iOS & Android)",
+      "DRM video protection",
+      "AI Credit 1000",
+      "DRM video protection",
+      "AI-powered insights & risk flagging",
+      "Advanced test scheduling cohorts",
+      "AI Credit 10000",
     ],
   },
   {
     name: "Pro",
-    price: { monthly: "$149", annual: "$119" },
+    price: { monthly: "$300", annual: "$250" },
     period: "/month",
     description: "For rapidly growing teams with advanced needs.",
     buttonText: "Get Started with Pro",
     isPopular: true,
     features: [
-      "Up to 5,000 active learners",
-      "Custom domain & full white-labeling",
-      "Enterprise DRM video protection",
+      "Upto 5000 active learners",
+      "Custom Sub domain",
+      "Full White Label",
+      "1 TB file Upload/ Month",
       "AI-powered insights & risk flagging",
+      "Priority 12/7 chat & email support",
       "Advanced test scheduling cohorts",
-      "Priority 24/7 chat & email support",
+      "Native mobile apps (iOS & Android)",
+      "DRM video protection",
+      "AI Credit 1000",
+    ],
+    exfeatures: [
+      "Dedicated account manager",
+      "Custom API integrations",
+      "White-glove data migration",
+      "99.9% SLA uptime guarantee",
     ],
   },
   {
@@ -45,10 +67,18 @@ const plans = [
     isPopular: false,
     features: [
       "Unlimited active learners",
+      "Custom Domain",
+      "Full White Label",
+      "Unlimited Bandwidth/Storage",
+      "AI-powered insights & risk flagging",
+      "Priority 24/7 chat & email support",
+      "Advanced test scheduling cohorts",
       "Custom native mobile apps (iOS & Android)",
+      "DRM video protection",
+      "AI Credit 10000",
       "Dedicated account manager",
-      "White-glove data migration",
       "Custom API integrations",
+      "White-glove data migration",
       "99.9% SLA uptime guarantee",
     ],
   },
@@ -63,12 +93,13 @@ export default function PricingHeader({
   isAnnual,
   setIsAnnual,
 }: PricingHeaderProps) {
+  const router = useRouter();
 
   return (
     <div className="min-h-full bg-white font-manrope">
       {/* HEADER SECTION - Keeping the Gradient Design from Component 1 */}
-      <section className="h-200 relative pt-24 md:pt-32 pb-[120px] md:pb-[168px] px-4 flex flex-col items-center rounded-b-2xl text-center bg-[linear-gradient(180deg,_rgba(255,255,255,0.1)_14%,_rgba(0,102,255,0.1)_100%)]">
-        <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50/50 px-4 py-2 text-sm font-medium text-blue-700 backdrop-blur-sm">
+      <section className="h-200 relative pt-24 md:pt-32 pb-[120px] md:pb-[168px] flex flex-col items-center rounded-b-2xl text-center bg-[linear-gradient(180deg,_rgba(255,255,255,0.1)_14%,_rgba(0,102,255,0.1)_100%)]">
+        <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50/50 py-2 px-3 text-sm font-medium text-blue-700 backdrop-blur-sm">
           <Sparkles className="h-4 w-4" />
           <span>Flexible Pricing</span>
         </div>
@@ -125,19 +156,21 @@ export default function PricingHeader({
       </section>
 
       {/* PRICING CARDS SECTION - Taking Data and UI from Component 2 */}
-      <section className="relative mx-auto w-full max-w-7xl px-4 pb-24 sm:px-6 lg:px-8 -mt-50">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-6 lg:gap-8 max-w-6xl mx-auto">
+      <section className="relative mx-auto w-full max-w-9xl px-4 pb-24 sm:px-6 lg:px-8 -mt-50">
+        <div className="grid grid-cols-1 md:grid-cols-3 max-w-7xl mx-auto">
           {plans.map((plan, index) => {
             const isMiddle = index === 1;
+            const isFirst = index === 0;
+            const isLast = index === plans.length - 1;
 
             return (
               <div
                 key={plan.name}
-                className={`relative flex flex-col rounded-[2.5rem] p-8 transition-all duration-300 hover:-translate-y-2 lg:p-10 ${
+                className={`relative flex flex-col p-8 transition-all duration-300 hover:-translate-y-2 lg:p-10 ${
                   isMiddle
-                    ? "bg-gradient-to-b from-blue-600 to-indigo-700 text-white shadow-[0_20px_40px_-15px_rgba(37,99,235,0.5)] border-0 scale-100 md:scale-105 z-10"
+                    ? "bg-gradient-to-b from-blue-600 to-indigo-700 text-white shadow-[0_20px_40px_-15px_rgba(37,99,235,0.5)] border-0 scale-100 z-10"
                     : "border border-slate-200 bg-white text-neutral-900 shadow-xl shadow-slate-200/40"
-                }`}
+                } ${isFirst ? "md:rounded-l-[16px]" : ""} ${isLast ? "md:rounded-r-[16px]" : ""}`}
               >
                 {/* Plan Header */}
                 <div className="mb-5 flex items-center justify-between gap-3">
@@ -187,6 +220,7 @@ export default function PricingHeader({
 
                 {/* Action Button */}
                 <button
+                  onClick={() => router.push("/RequestDemo")}
                   className={`w-full py-4 rounded-full text-[15px] font-bold transition-all duration-200 mb-8 ${
                     isMiddle
                       ? "bg-white text-blue-700 hover:bg-slate-50 hover:shadow-lg active:scale-95"
@@ -213,20 +247,44 @@ export default function PricingHeader({
                         {isMiddle ? (
                           <div className="shrink-0 w-5 h-5 rounded-full bg-white/20 flex items-center justify-center mt-0.5">
                             <Check
-                              className="w-3.5 h-3.5 text-white"
+                              className="w-3.5 h-3.5 text-green-400"
                               strokeWidth={3}
                             />
                           </div>
                         ) : (
-                          <div className="shrink-0 w-5 h-5 rounded-full bg-blue-100 flex items-center justify-center mt-0.5">
+                          <div className="shrink-0 w-5 h-5 rounded-full bg-[#0d993016] flex items-center justify-center mt-0.5">
                             <Check
-                              className="w-3.5 h-3.5 text-blue-600"
+                              className="w-3.5 h-3.5 text-green-400"
                               strokeWidth={3}
                             />
                           </div>
                         )}
                         <span
                           className={`font-medium leading-snug ${isMiddle ? "text-blue-50" : "text-slate-600"}`}
+                        >
+                          {feature}
+                        </span>
+                      </li>
+                    ))}
+                    {plan.exfeatures?.map((feature, i) => (
+                      <li key={`ex-${i}`} className="flex items-start gap-3">
+                        {isMiddle ? (
+                          <div className="shrink-0 w-5 h-5 rounded-full bg-white/20 flex items-center justify-center mt-0.5">
+                            <X
+                              className="w-3.5 h-3.5 text-red-300"
+                              strokeWidth={3}
+                            />
+                          </div>
+                        ) : (
+                          <div className="shrink-0 w-5 h-5 rounded-full bg-red-50 flex items-center justify-center mt-0.5">
+                            <X
+                              className="w-3.5 h-3.5 text-red-400"
+                              strokeWidth={3}
+                            />
+                          </div>
+                        )}
+                        <span
+                          className={`font-medium leading-snug ${isMiddle ? "text-blue-200/80" : "text-slate-400"}`}
                         >
                           {feature}
                         </span>

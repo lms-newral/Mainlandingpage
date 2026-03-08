@@ -9,6 +9,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { MessageCircleQuestion, ArrowRight, Sparkles } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 // Upgraded, high-quality FAQs focusing on enterprise features, security, and scaling.
 const faqs = [
@@ -45,6 +46,7 @@ const faqs = [
 ];
 
 export default function FAQSection() {
+  const router = useRouter();
   return (
     <section className="relative w-full overflow-hidden bg-white py-16 sm:py-24 md:py-32">
       {/* Background ambient glow */}
@@ -72,11 +74,9 @@ export default function FAQSection() {
         </div>
 
         <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-12 lg:gap-12">
-          
           {/* Left Column - CTA Card */}
           <div className="lg:col-span-5 lg:sticky lg:top-24">
             <div className="relative overflow-hidden rounded-[2rem] border border-blue-100 bg-[#F7FAFF] p-8 shadow-xl shadow-blue-900/5 md:p-10">
-              
               {/* Decorative background gradients */}
               <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-blue-200/50 blur-3xl"></div>
               <div className="absolute -bottom-20 -left-20 h-64 w-64 rounded-full bg-indigo-200/40 blur-3xl"></div>
@@ -85,18 +85,19 @@ export default function FAQSection() {
                 <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-white">
                   <Sparkles className="h-7 w-7 text-blue-600" />
                 </div>
-                
+
                 <h3 className="text-2xl font-bold leading-tight text-neutral-900 sm:text-3xl">
                   FAQs can only do <br /> so much.
                 </h3>
 
                 <p className="text-base leading-relaxed text-slate-600">
-                  For the rest, there is our team. Schedule a personalized walkthrough 
-                  and let us show you exactly how Synappses fits your specific ed-tech model.
+                  For the rest, there is our team. Schedule a personalized
+                  walkthrough and let us show you exactly how Synappses fits
+                  your specific ed-tech model.
                 </p>
 
                 <a
-                  href="https://cal.com/newralfounder/schedule-synappses-lms-demo?overlayCalendar=true"
+                  onClick={() => router.push("/RequestDemo")}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group mt-4 inline-flex items-center justify-center gap-2 rounded-full bg-blue-600 px-6 py-3.5 text-base font-semibold text-white transition-all hover:bg-blue-700  active:scale-95 sm:w-auto"
