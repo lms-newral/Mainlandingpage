@@ -39,57 +39,57 @@ interface SignupFormProps {
 
 export function SignupForm({ formData, setFormData, onSubmit, loading = false , goBackToLogin }: SignupFormProps) {
     return (
-        <div className="relative min-h-screen w-full bg-[#fafafa] py-12 px-4 sm:px-6 overflow-hidden selection:bg-indigo-100 selection:text-indigo-900">
-            {/* Premium Background */}
-            <div className="absolute inset-0 z-0 pointer-events-none">
-                <BackgroundBeams className="opacity-30" />
-                <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-indigo-200/30 blur-[120px] rounded-full mix-blend-multiply" />
-            </div>
-
-            <div className="relative z-10 max-w-6xl mx-auto flex flex-col items-center">
-                {/* Top Header */}
-                <div className="flex flex-col items-center mb-10">
-                    <motion.img
-                        initial={{ opacity: 0, y: -10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        className="w-12 h-auto mb-6"
-                        src="https://res.cloudinary.com/dyktjldc4/image/upload/v1763739734/LOGO_NEWRAL_2_yy9ky2.png"
-                        alt="Newral Logo"
-                    />
-                    <motion.h1
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.1 }}
-                        className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight text-center"
-                    >
-                        Configure your Workspace
-                    </motion.h1>
-                    <motion.p
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.2 }}
-                        className="text-slate-500 mt-3 text-base sm:text-lg font-medium"
-                    >
-                        Set up your brand identity and admin profile in seconds.
-                    </motion.p>
-                </div>
-
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.3, duration: 0.5, ease: "easeOut" }}
-                    className="w-full bg-white rounded-[32px] shadow-[0_8px_40px_-12px_rgba(0,0,0,0.1)] border border-slate-100 overflow-hidden"
-                >
-                    <FormSection
-                        onSubmit={onSubmit}
-                        formData={formData}
-                        setFormData={setFormData}
-                        loading={loading}
-                        goBackToLogin={goBackToLogin}
-                    />
-                </motion.div>
-            </div>
+      <div className="relative min-h-screen w-full bg-[#fafafa] py-12 px-4 sm:px-6 overflow-hidden selection:bg-indigo-100 selection:text-indigo-900">
+        {/* Premium Background */}
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          <BackgroundBeams className="opacity-30" />
+          <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-indigo-200/30 blur-[120px] rounded-full mix-blend-multiply" />
         </div>
+
+        <div className="relative z-10 max-w-6xl mx-auto flex flex-col items-center">
+          {/* Top Header */}
+          <div className="flex flex-col items-center mb-10">
+            <motion.img
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="w-40 h-auto mb-6"
+              src="/synappses_logo.svg"
+              alt="Synappses Logo"
+            />
+            <motion.h1
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight text-center"
+            >
+              Configure your Workspace
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="text-slate-500 mt-3 text-base sm:text-lg font-medium"
+            >
+              Set up your brand identity and admin profile in seconds.
+            </motion.p>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.5, ease: "easeOut" }}
+            className="w-full bg-white rounded-[32px] shadow-[0_8px_40px_-12px_rgba(0,0,0,0.1)] border border-slate-100 overflow-hidden"
+          >
+            <FormSection
+              onSubmit={onSubmit}
+              formData={formData}
+              setFormData={setFormData}
+              loading={loading}
+              goBackToLogin={goBackToLogin}
+            />
+          </motion.div>
+        </div>
+      </div>
     );
 }
 

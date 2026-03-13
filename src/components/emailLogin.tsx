@@ -141,8 +141,8 @@ export function EmailLogin({ formData, setFormData, onSubmit }: LoginProps) {
                 >
                     <img
                         className="h-9 w-auto"
-                        src="https://res.cloudinary.com/dyktjldc4/image/upload/v1763739734/LOGO_NEWRAL_2_yy9ky2.png"
-                        alt="Newral"
+                        src="/synappses_logo.svg"
+                        alt="Synappses Logo"
                     />
                 </motion.div>
 
