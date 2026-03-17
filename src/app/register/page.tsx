@@ -164,6 +164,7 @@ export default function Signupflow() {
                 subdomain: formData.subdomain.trim().toLowerCase(),
                 companyName: formData.organisationName.trim(),
                 adminEmail: formData.email.trim(),
+                logoUrl: formData.logoUrl,
                 adminPassword: formData.password,
                 firstName: formData.firstName.trim(),
                 lastName: formData.lastName.trim(),
@@ -198,26 +199,26 @@ export default function Signupflow() {
             }
 
             // Step 2: Update logo if logoUrl exists
-            if (formData.logoUrl) {
-                try {
-                    const logoResult = await updateTenantLogo({
-                        variables: {
-                            input: {
-                                logoUrl: formData.logoUrl
-                            }
-                        }
-                    });
+            // if (formData.logoUrl) {
+            //     try {
+            //         const logoResult = await updateTenantLogo({
+            //             variables: {
+            //                 input: {
+            //                     logoUrl: formData.logoUrl
+            //                 }
+            //             }
+            //         });
 
-                    if (logoResult.data?.updateTenantLogo.success) {
-                        showToast.success("Logo uploaded successfully!");
-                    } else {
-                        showToast.warning("Tenant created but logo upload failed. You can update it later.");
-                    }
-                } catch (logoError) {
-                    console.error("Logo upload failed:", logoError);
-                    showToast.warning("Tenant created but logo upload failed. You can update it later.");
-                }
-            }
+            //         if (logoResult.data?.updateTenantLogo.success) {
+            //             showToast.success("Logo uploaded successfully!");
+            //         } else {
+            //             showToast.warning("Tenant created but logo upload failed. You can update it later.");
+            //         }
+            //     } catch (logoError) {
+            //         console.error("Logo upload failed:", logoError);
+            //         showToast.warning("Tenant created but logo upload failed. You can update it later.");
+            //     }
+            // }
 
             showToast.success("Account created successfully!");
             showToast.loading("Redirecting to your admin panel...", 1500);
